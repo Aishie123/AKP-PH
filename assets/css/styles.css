@@ -215,7 +215,7 @@ img {
     justify-content: center;
     height: 100vh; /* Full height of the viewport */
     width: 100vw; /* Full width of the viewport */
-    background-color: rgba(255, 255, 255, 1); /* Semi-transparent background */
+    background-color: var(--container-color); /* Semi-transparent background */
   }
 
 .loader {
@@ -226,10 +226,8 @@ img {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 1),
+    box-shadow: inset -10px -10px 15px var(--container-color),
       inset 10px 10px 10px rgba(0, 0, 0, 0.1);
-    transition: opacity 1s ease-out; /* Added transition property */
-    opacity: 1; /* Set initial opacity */
   }
   
   .loader::before {
@@ -238,13 +236,17 @@ img {
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    box-shadow: -10px -10px 15px rgba(255, 255, 255, 1),
+    box-shadow: -10px -10px 15px var(--container-color),
       10px 10px 10px rgba(0, 0, 0, 0.1);
-    transition: opacity 1s ease-out; /* Added transition property */
-    opacity: 1; /* Set initial opacity */
   }
+
+  .loader-logo {
+    color: var(--first-color); 
+    font-size: 2rem;
+    font-weight: var(--font-bold);
+    }
   
-  .blue {
+  .red {
     height: 186px;
     width: 220px;
     position: absolute;
@@ -257,13 +259,13 @@ img {
     }
   }
   
-  .blue::before {
+  .red::before {
     content: "";
     position: absolute;
     height: 30px;
     border-radius: 50%;
     width: 30px;
-    background: linear-gradient(45deg, #336dff, #5c89ff);
+    background: linear-gradient(45deg, var(--first-color), var(--first-color-alt));
     box-shadow: 0 5px 10px rgb(0 0 0 / 30%);
   }
 
@@ -272,6 +274,7 @@ img {
 .loader.loader-hidden {
     opacity: 0;
     pointer-events: none;
+    transition: opacity 1s ease-out; /* Added transition property */
 }
   
 
