@@ -218,7 +218,7 @@ img {
     background-color: var(--container-color); /* Semi-transparent background */
   }
 
-.loader {
+  .loader {
     position: relative;
     display: flex;
     align-items: center;
@@ -226,8 +226,8 @@ img {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    box-shadow: inset -10px -10px 15px var(--container-color),
-      inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow:  inset -10px -10px 15px hsla(359, 100%, 98%, 1),
+    inset 10px 10px 10px hsla(359, 10%, 50%, 0.1);
   }
   
   .loader::before {
@@ -236,9 +236,10 @@ img {
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    box-shadow: -10px -10px 15px var(--container-color),
-      10px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -10px -10px 15px hsla(359, 100%, 98%, 1),
+    10px 10px 10px hsla(359, 10%, 50%, 0.1);
   }
+  
 
   .loader-logo {
     color: var(--first-color); 

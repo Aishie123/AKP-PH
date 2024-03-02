@@ -1,7 +1,4 @@
-window.addEventListener('load', function () {
-    const loader = document.querySelector('.loader-wrapper');
-    loader.classList.add('loader-hidden');
-});
+
 
 /*==================== MENU SHOW AND HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
