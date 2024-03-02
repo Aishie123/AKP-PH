@@ -50,15 +50,15 @@ function scrollActive() {
 }
 
 function handleActiveLinkChange(currentLinkId) {
+    const applyNavItem = document.getElementById(navItemToRemove);
+
     if (currentLinkId === 'home') {
         // Hide or remove the navigation item with ID 'apply'
-        const applyNavItem = document.getElementById(navItemToRemove);
         if (applyNavItem) {
             applyNavItem.style.display = 'none'; // or use 'remove' to completely remove it from the DOM
         }
-    } else if (lastActiveLinkId === 'home') {
-        // Show the navigation item with ID 'apply' if the current link is 'home'
-        const applyNavItem = document.getElementById(navItemToRemove);
+    } else {
+        // Show the navigation item with ID 'apply' if the current link is not 'home'
         if (applyNavItem) {
             applyNavItem.style.display = 'block'; // or use 'initial' to revert to the default display style
         }

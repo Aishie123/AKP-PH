@@ -310,10 +310,6 @@ img {
     font-size: 1.2rem;
 }
 
-.nav__item{
-    justify-self: center;
-}
-
 .nav__close {
     position: absolute;
     right: 1.3rem;
@@ -326,7 +322,6 @@ img {
     transition: all 200ms;
     background-color: var(--first-color);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0);
 }
 
 /* show menu */
