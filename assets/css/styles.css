@@ -722,6 +722,8 @@ img {
 
 .footer__link {
     color: var(--first-color);
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 .footer__content{
