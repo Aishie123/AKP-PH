@@ -21,23 +21,56 @@ if(navClose){
 }
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const navItemToRemove = 'btn-apply';
+let lastActiveLinkId = null;
 const sections = document.querySelectorAll('section[id]')
 
-function scrollActive(){
-    const scrollY = window.pageYOffset
+function scrollActive() {
+    const scrollY = window.pageYOffset;
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+        sectionId = current.getAttribute('id');
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            const activeLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+            activeLink.classList.add('active-link');
+            
+            // Check if the active link has changed
+            if (sectionId !== lastActiveLinkId) {
+                handleActiveLinkChange(sectionId);
+            }
+
+            lastActiveLinkId = sectionId;
         } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');
         }
-    })
+    });
 }
+
+function handleActiveLinkChange(currentLinkId) {
+    if (currentLinkId === 'home') {
+        // Hide or remove the navigation item with ID 'apply'
+        const applyNavItem = document.getElementById(navItemToRemove);
+        if (applyNavItem) {
+            applyNavItem.style.display = 'none'; // or use 'remove' to completely remove it from the DOM
+        }
+    } else if (lastActiveLinkId === 'home') {
+        // Show the navigation item with ID 'apply' if the current link is 'home'
+        const applyNavItem = document.getElementById(navItemToRemove);
+        if (applyNavItem) {
+            applyNavItem.style.display = 'block'; // or use 'initial' to revert to the default display style
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const initialActiveLink = document.querySelector('.nav__menu a[href*="home"]');
+    const initialLinkId = initialActiveLink ? initialActiveLink.getAttribute('href').replace('#', '') : null;
+    handleActiveLinkChange(initialLinkId);
+});
+
 window.addEventListener('scroll', scrollActive)
 
 

@@ -237,7 +237,7 @@ img {
     color: var(--first-color);
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 900px) {
     .nav__menu {
         position: fixed;
         bottom: -100%;
@@ -252,6 +252,7 @@ img {
 }
 
 .nav__list {
+    align-items: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
@@ -264,6 +265,17 @@ img {
     color: var(--container-color);
     font-weight: var(--font-light);
     position: relative;
+}
+
+.nav__button{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--first-color-alt);
+    font-weight: bold;
+}
+
+.nav__button:hover{
+    background-color: var(--first-color-lighter);
 }
 
 .nav__label {
@@ -296,6 +308,10 @@ img {
 
 .nav__icon {
     font-size: 1.2rem;
+}
+
+.nav__item{
+    justify-self: center;
 }
 
 .nav__close {
@@ -710,7 +726,7 @@ img {
 
 .footer__bg {
     background-color: var(--container-color);
-    padding: 2rem 0 3rem;
+    padding: 0.1rem 0 5rem;
 }
 
 .footer__heading {
@@ -752,7 +768,7 @@ img {
 }
 
 .footer__copy {
-    font-size: var(--normal-font-size);
+    font-size: var(--small-font-size);
     text-align: center;
     margin-top: var(--mb-1);
 }
@@ -832,7 +848,7 @@ img {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
     body {
         margin: 0;
     }
@@ -918,32 +934,31 @@ img {
         padding-bottom: 5rem;
     }
 
-    @media screen and (min-width: 900px) {
-        .footer__container{
-            grid-template-columns: 1fr 0.5fr 0.5fr;
-            justify-content: center;
-        }
-    
-        .footer__content{
-            text-align: left;
-        }
-
-        .footer__link{
-            font-size: var(--smaller-font-size);
-        }
-
-        .footer__copy,
-        .footer__subtitle{
-            font-size: var(--small-font-size);
-        }
-
-        .about__intro {
-            column-gap: 5rem;
-        }
-        .about__img {
-            width: 350px;
-        }
+    .footer__container{
+        grid-template-columns: 1fr 0.5fr 0.5fr;
+        justify-content: center;
     }
+
+    .footer__content{
+        text-align: left;
+    }
+
+    .footer__copy,
+    .footer__link{
+        font-size: var(--smaller-font-size);
+    }
+
+    .footer__subtitle{
+        font-size: var(--small-font-size);
+    }
+
+    .about__intro {
+        column-gap: 5rem;
+    }
+    .about__img {
+        width: 350px;
+    }
+    
 }
 
 /* For large devices */
