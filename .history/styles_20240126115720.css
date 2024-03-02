@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #map {
+    height: 100vh;
+  }
+  
+  #alumni-details {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 300px;
+  }
+  
+  #alumni-details h2 {
+    margin-bottom: 5px;
+  }
+  
