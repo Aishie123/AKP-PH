@@ -208,12 +208,12 @@ img {
 .cursor {
     z-index: 9999;
     position: fixed;
-    background: #2696e8;
+    background: #F27E7E;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     pointer-events: none;
-    box-shadow: 0 0 20px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8;
+    box-shadow: 0 0 20px #F27E7E, 0 0 60px #F27E7E, 0 0 100px #F27E7E;
     animation: colors 5s infinite;
     transform: translate(-50%, -50%);
     display: none;
@@ -774,6 +774,7 @@ img {
 
 .contact__form {
     gap: 1.5rem;
+    align-content: center;
 }
 
 .contact__box {
@@ -1428,9 +1429,13 @@ img {
     }
 
     .home__container,
-    .about1__container,
-    .contact__container {
+    .about1__container {
         padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .contact__container {
+        padding-top: 2rem;
         padding-bottom: 5rem;
     }
 
