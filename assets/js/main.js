@@ -191,9 +191,10 @@ function changeBg() {
     }
 }
 
-// Apply initial state only if the current page is index.html
-if (window.location.pathname.includes("index.html")) {
-    navbar.classList.remove("nav__color");
+navbar.classList.remove("nav__color");
+
+if (window.location.pathname.includes("about.html")) {
+    navbar.classList.add("nav__color");
 }
 
 window.addEventListener("scroll", changeBg);
