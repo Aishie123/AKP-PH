@@ -206,7 +206,7 @@ img {
 
 /*==================== CURSOR ====================*/
 .cursor {
-    z-index: 9999;
+    z-index: 5000;
     position: fixed;
     background: #F27E7E;
     width: 20px;
@@ -245,7 +245,7 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 5000;
+    z-index: 9000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -309,7 +309,6 @@ img {
     box-shadow: 0 5px 10px rgb(0 0 0 / 30%);
 }
 
-/* Add the following rule to fade out the loader when it's hidden */
 .loader-wrapper.loader-hidden,
 .loader.loader-hidden {
     opacity: 0;
@@ -667,7 +666,7 @@ img {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    border-radius: 10px; /* Adjust as needed */
+    border-radius: 10px;
     background-color: var(--container-color);
     position: relative; /* Create a relative positioning context */
 }
