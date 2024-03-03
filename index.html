@@ -28,7 +28,7 @@
 
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
-            <nav class="nav nav__color container" id="nav-bar">
+            <nav class="nav container nav__color" id="nav-bar">
                 <a href="#" class="nav__logo">ASIA KAKEHASHI PROJECT PH</a>
 
                 <div class="nav__menu" id="nav-menu">
@@ -40,7 +40,7 @@
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#about" class="nav__link">
+                            <a href="about.html" class="nav__link">
                                 <i class="uil uil-info-circle nav__icon"></i>
                                 <span class="nav__label">About</span>
                             </a>
@@ -52,12 +52,6 @@
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="" class="nav__link">
-                                <i class="uil uil-sitemap nav__icon"></i>
-                                <span class="nav__label">Core Team</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
                             <a href="#contact" class="nav__link">
                                 <i class="uil uil uil-envelope nav__icon"></i>
                                 <span class="nav__label">Contact</span>
@@ -65,7 +59,9 @@
                         </li>
                         <li class="nav__item">
                             <a href="#apply" class="nav__link" id="btn-apply">
-                                <span class="nav__label nav__button">APPLY NOW!</span>
+                                <span class="nav__label nav__button nav__big">APPLY NOW<i class="uil uil-message"></i></span>
+                                <span class="nav__label nav__button nav__small">
+                                    APPLY <i class="uil uil-message"></i></span>
                             </a>
                         </li>
                     </ul>
@@ -73,9 +69,6 @@
                 </div>
 
                 <div class="nav__btns">
-                    <!-- Theme change button -->
-                    <!-- <i class="uil uil-moon change-theme" id="theme-button"></i> -->
-
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="uil uil-apps"></i>
                     </div>
@@ -86,7 +79,7 @@
         <!--==================== MAIN ====================-->
         <main class="main">
             <!--==================== HOME ====================-->
-            <section class="home section" id="home">
+            <section class="home" id="home">
                 <div class="home__container container grid">
                     <div class="home__content grid text-shadow">
                         <div class="home__data">
@@ -126,11 +119,38 @@
             </section>
 
             <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
+            <section id="about">
+                <div class="numbers__container container grid">
+                    <div class="numbers__box grid">
+                        <div class="numbers__content">
+                            <h1 class="numbers__num">90+</h1>
+                            <hr class="numbers__line">
+                            <p class="numbers__details">
+                                <b>Filipino Scholars</b> under AKP
+                            </p>
+                        </div>
+                        <div class="numbers__content">
+                            <h1 class="numbers__num">30+</h1>
+                            <hr class="numbers__line">
+                            <p class="numbers__details">
+                                <b>Host Prefectures</b> in Japan
+                            </p>
+                        </div>
+                        <div class="numbers__content">
+                            <h1 class="numbers__num">50+</h1>
+                            <hr class="numbers__line">
+                            <p class="numbers__details">
+                                <b>Places</b> in the Philippines
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="about1__container container grid">
-                    <div class="about__intro grid">
+                    <div class="about1__intro grid">
                         <div class="about__video">
                             <iframe
+                                class="video"
                                 width="100%"
                                 height="100%"
                                 src="https://www.youtube.com/embed/DQcdpBzu2tk?si=pz2QAwk78a2g-6jF"
@@ -212,7 +232,7 @@
             </section>
 
             <!--==================== ALUMNI ====================-->
-            <section class="alumni section" id = "alumni">
+            <section class="alumni" id = "alumni">
                 <div class="alumni__container container swiper">
                     <h2 class="section__title-dark">Alumni Stories</h2>
                     <div class = "swiper-wrapper">
@@ -279,105 +299,118 @@
             </section>
 
             <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact">
+            <section class="contact" id="contact">
                 <h2 class="section__title-light">Contact Us</h2>
                 <div class="contact__container container grid">
-                    <div>
-                        <div class="contact__information">
-                            <i class="uil uil-envelope contact__icon"></i>
+                    <div class="contact__box grid">
+                        <div>
+                            <div class="contact__information">
+                                <i class="uil uil-envelope contact__icon"></i>
 
-                            <div>
-                                <h3 class="contact__title">Email</h3>
-                                <span class="contact__subtitle">asiakakehashiprojectph@gmail.com</span>
+                                <div>
+                                    <h3 class="contact__title">Email</h3>
+                                    <span class="contact__subtitle">asiakakehashiprojectph@gmail.com</span>
+                                </div>
+                            </div>
+
+                            <div class="contact__information">
+                                <i class="uil uil-map-marker contact__icon"></i>
+
+                                <div>
+                                    <h3 class="contact__title">Location</h3>
+                                    <span class="contact__subtitle">
+                                        AFS Intercultural Programs Philippines,<br>
+                                        Lot 10-B Block 6, Tupelo St., Phase 1-C,<br>
+                                        Greenwoods Executive Village,<br>
+                                        Cainta, Rizal 1900 Philippines
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="contact__information">
+                                <iframe class="contact__map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15446.738196775039!2d121.0915505516683!3d14.560023174742447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8114feaa4f7%3A0x7987e2a658c0c6f2!2sAFS%20Intercultural%20Programs%20Philippines!5e0!3m2!1sen!2sph!4v1709394464611!5m2!1sen!2sph"
+                                width="600" height="450" style="border:0;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
-
-                        <div class="contact__information">
-                            <i class="uil uil-map-marker contact__icon"></i>
-
-                            <div>
-                                <h3 class="contact__title">Location</h3>
-                                <span class="contact__subtitle">Davao City, Philippines</span>
-                            </div>
-                        </div>
-                    </div>
 
                     <!--==================== CONTACT FORM ====================-->
 
-                    <form action="" class="contact__form grid" id="contact-form">
-                        <div class="contact__inputs grid">
-                            <div class="contact__content">
-                                <label for="name" class="contact__label">Name</label>
-                                <input type="text" class="contact__input" id="name">
+                        <form action="" class="contact__form grid" id="contact-form">
+                            <div class="contact__inputs grid">
+                                <div class="contact__content">
+                                    <label for="name" class="contact__label">Name</label>
+                                    <input type="text" class="contact__input" id="name">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="contact__inputs grid">
-                            <div class="contact__content">
-                                <label for="email" class="contact__label">Email</label>
-                                <input type="email" class="contact__input" id="email">
+                            <div class="contact__inputs grid">
+                                <div class="contact__content">
+                                    <label for="email" class="contact__label">Email</label>
+                                    <input type="email" class="contact__input" id="email">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="contact__inputs grid">
-                            <div class="contact__content">
-                                <label for="subject" class="contact__label">Subject</label>
-                                <input type="text" class="contact__input" id="subject">
+                            <div class="contact__inputs grid">
+                                <div class="contact__content">
+                                    <label for="subject" class="contact__label">Subject</label>
+                                    <input type="text" class="contact__input" id="subject">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="contact__inputs grid">
-                            <div class="contact__content">
-                                <label for="message" class="contact__label">Message</label>
-                                <textarea cols="0" rows="7" class="contact__input" id="message"></textarea>
+                            <div class="contact__inputs grid">
+                                <div class="contact__content">
+                                    <label for="message" class="contact__label">Message</label>
+                                    <textarea cols="0" rows="7" class="contact__input" id="message"></textarea>
+                                </div>
                             </div>
-                        </div>
 
-                        <div>
-                            <a href="#" id="send-msg" class="contact__button button--flex">
-                                Send Message
-                                <i class="uil uil-message button__icon"></i>
-                            </a>
-                        </div>
+                            <div>
+                                <a href="#" id="send-msg" class="contact__button button--flex">
+                                    Send Message
+                                    <i class="uil uil-message button__icon"></i>
+                                </a>
+                            </div>
 
-                        <!--==================== EMAILJS ====================-->
+                            <!--==================== EMAILJS ====================-->
 
-                        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
-                        <script type="text/javascript">
-                            (function () {
-                            emailjs.init('1yLcSQlBEhgzADQ5I'); // Replace 'YOUR_PUBLIC_KEY' with your actual Public Key from EmailJS
+                            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
+                            <script type="text/javascript">
+                                (function () {
+                                emailjs.init('1yLcSQlBEhgzADQ5I');
 
-                            const sendMessageBtn = document.getElementById('send-msg');
+                                const sendMessageBtn = document.getElementById('send-msg');
 
-                            sendMessageBtn.addEventListener('click', function (event) {
-                                event.preventDefault(); // Prevent form submission
+                                sendMessageBtn.addEventListener('click', function (event) {
+                                    event.preventDefault(); // Prevent form submission
 
-                                var params = {
-                                name: document.getElementById('name').value,
-                                email: document.getElementById('email').value,
-                                subject: document.getElementById('subject').value,
-                                message: document.getElementById('message').value,
-                                };
+                                    var params = {
+                                    name: document.getElementById('name').value,
+                                    email: document.getElementById('email').value,
+                                    subject: document.getElementById('subject').value,
+                                    message: document.getElementById('message').value,
+                                    };
 
-                                const serviceID = 'service_aishie-gmail';
-                                const templateID = 'template_aishie-email';
+                                    const serviceID = 'service_aishie-gmail';
+                                    const templateID = 'template_aishie-email';
 
-                                // Send the email using EmailJS
-                                emailjs.send(serviceID, templateID, params)
-                                .then(function (response) {
-                                    // Email sent successfully, do something (e.g., show a success message)
-                                    alert('Email sent successfully!');
-                                    document.getElementById('contact-form').reset(); // Clear the form
-                                })
-                                .catch(function (error) {
-                                    // An error occurred while sending the email, show an error message
-                                    alert('Failed to send email. Please try sending an email directly instead.');
+                                    // Send the email using EmailJS
+                                    emailjs.send(serviceID, templateID, params)
+                                    .then(function (response) {
+                                        // Email sent successfully, do something (e.g., show a success message)
+                                        alert('Email sent successfully!');
+                                        document.getElementById('contact-form').reset(); // Clear the form
+                                    })
+                                    .catch(function (error) {
+                                        // An error occurred while sending the email, show an error message
+                                        alert('Failed to send email. Please try sending an email directly instead.');
+                                    });
                                 });
-                            });
-                            })();
-                        </script>
-                    </form>
-                    
+                                })();
+                            </script>
+                        </form>
+                    </div> 
                 </div>
             </section>
         </main>
@@ -386,41 +419,40 @@
         <footer class="footer">
             <div class="footer__bg">
                 <div class="footer__container container grid">
-                    <div class="footer__content">
-                        <h2 class="footer__title">Asia Kakehashi Project PH</h2>
-                        <span class="footer__subtitle section__text-dark">Building Bridges from the Philippines to Japan</span>
-                        <div class="footer__socials section__text-dark">
-                            <a href="https://facebook.com/aishie13" target="_blank" class="footer__social">
-                                <i class="uil uil-facebook-f"></i>
+                    <div class="footer__box grid">
+                        <div class="footer__content">
+                            <h2 class="footer__title">Asia Kakehashi Project PH</h2>
+                            <span class="footer__subtitle section__text-dark">Building Bridges from the Philippines to Japan</span>
+                            <div class="footer__socials section__text-dark">
+                                <a href="https://facebook.com/aishie13" target="_blank" class="footer__social">
+                                    <i class="uil uil-facebook-f"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/aishie918/" target="_blank" class="footer__social">
+                                    <i class="uil uil-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer__content">
+                            <h3 class="footer__heading section__text-dark">Resource Videos</h3>
+                            <a href="https://www.linkedin.com/in/aishie918/" target="_blank" class="footer__link">
+                                <u>Post-Exchange Video of Alumni Batch 1</u>
                             </a>
-                            <a href="https://www.linkedin.com/in/aishie918/" target="_blank" class="footer__social">
-                                <i class="uil uil-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/aishie918/" target="_blank" class="footer__link">
+                                <u>Messages from Alumni Batch 1</u>
+                            </a>
+                            <a href="https://www.linkedin.com/in/aishie918/" target="_blank" class="footer__link">
+                                <u>Messages from Alumni Batch 5</u>
                             </a>
                         </div>
-                    </div>
-                    <div class="footer__content">
-                        <h3 class="footer__heading section__text-dark">Resource Videos</h3>
-                        <a href="https://www.linkedin.com/in/aishie918/" target="_blank" class="footer__link">
-                            <u>Post-Exchange Video of Alumni Batch 1</u>
-                        </a>
-                        <a href="https://www.linkedin.com/in/aishie918/" target="_blank" class="footer__link">
-                            <u>Messages from Alumni Batch 1</u>
-                        </a>
-                        <a href="https://www.linkedin.com/in/aishie918/" target="_blank" class="footer__link">
-                            <u>Messages from Alumni Batch 5</u>
-                        </a>
-                    </div>
-                    <div class="footer__content">
-                        <h3 class="footer__heading section__text-dark">Other Programs</h3>
-                        <a href="https://www.linkedin.com/in/aishie918/" target="_blank" class="footer__link">
-                            <u>AFS Philippines</u>
-                        </a>
-                        <a href="https://www.linkedin.com/in/aishie918/" target="_blank" class="footer__link">
-                            <u>Embassy of Japan in the Philippines</u>
-                        </a>
-                        <a href="https://www.linkedin.com/in/aishie918/" target="_blank" class="footer__link">
-                            <u>Messages from Alumni Batch 5</u>
-                        </a>
+                        <div class="footer__content">
+                            <h3 class="footer__heading section__text-dark">Other Programs</h3>
+                            <a href="https://www.linkedin.com/in/aishie918/" target="_blank" class="footer__link">
+                                <u>AFS Philippines</u>
+                            </a>
+                            <a href="https://www.linkedin.com/in/aishie918/" target="_blank" class="footer__link">
+                                <u>Embassy of Japan in the Philippines</u>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
