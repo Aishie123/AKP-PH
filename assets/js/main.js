@@ -172,7 +172,7 @@ function changeBg() {
     var scrollValue = window.scrollY;
 
     // Check if the current page is index.html
-    if (window.location.pathname.includes("index.html")) {
+    if (!window.location.pathname.includes("about.html")) {
         if (window.innerWidth < 768) {
             // Change behavior for small screens
             if (scrollValue < 1) {
